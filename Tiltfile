@@ -1,6 +1,7 @@
 SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='tapacr.azurecr.io/denny-herbrich-gke-01/apps-11-05-2022-12-40-32-694002876/tanzu-java-web-app-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
+allow_k8s_contexts('gke_tanzu-supply-chain-tools_us-central1-c_denny-tap-test')
 
 k8s_custom_deploy(
     'tanzu-java-web-app',
